@@ -307,6 +307,14 @@ protected:
   TracedCallback<Ptr<const Packet>, uint32_t> m_underSensitivity;
 
   /**
+   * The trace source fired when a packet cannot be received the receiver
+   * is in the wrong state
+   *
+   * \see class CallBackTraceSource
+   */
+  TracedCallback<Ptr<const Packet>, uint32_t> m_rxWrongState;
+
+  /**
    * The trace source fired when a packet cannot be correctly received because
    * of interference.
    *

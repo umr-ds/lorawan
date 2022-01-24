@@ -69,6 +69,12 @@ LoraPhy::GetTypeId (void)
                      "could not be correctly received because"
                      "its received power is below the sensitivity of the receiver",
                      MakeTraceSourceAccessor (&LoraPhy::m_underSensitivity),
+                     "ns3::Packet::TracedCallback")
+    .AddTraceSource ("RXWrongState",
+                     "Trace source indicating a packet "
+                     "could not be correctly received because"
+                     "the receiver was in the wrong state",
+                     MakeTraceSourceAccessor (&LoraPhy::m_rxWrongState),
                      "ns3::Packet::TracedCallback");
   return tid;
 }
